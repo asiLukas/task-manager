@@ -34,5 +34,4 @@ DB_PORT=DB_PORT
 
 # NOTES
 - due to time constraints I unfortunately wasn't able to dockerize this app (which would be ideal due to the fact that we are running 3 different huge technologies)
-- there aren't any tests
 - the frontend isn't finished, there are NOTEs throughout the code which describe what isn't implemented
