@@ -5,6 +5,7 @@ from rest_framework.generics import (
     RetrieveUpdateDestroyAPIView,
     ListAPIView,
 )
+from rest_framework.filters import OrderingFilter
 
 from task.models import Task
 from task.serializers import TaskSerializer
@@ -17,9 +18,20 @@ class TaskList(ListAPIView):
     serializer_class = TaskSerializer
     permission_classes = [permissions.IsAuthenticated]
     pagination_class = CustomPagination
+    filter_backends = [OrderingFilter]
+    ordering_fields = ["created", "updated", "title"]
 
     def get_queryset(self):
-        return Task.objects.filter(owner=self.request.user)
+        queryset = Task.objects.filter(owner=self.request.user)
+
+        # get sorting field from the URL
+        sort_by = self.request.query_params.get("sort_by")
+
+        # make sure its a valid field
+        if sort_by in self.ordering_fields:
+            queryset = queryset.order_by(sort_by)
+
+        return queryset
 
 
 # PUT, DELETE, GET
