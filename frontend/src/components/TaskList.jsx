@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getTasks } from "../api/api";
 import TaskDetail from "./TaskDetail";
 import { deleteTask } from "../api/api";
+import TaskForm from "./TaskForm";
 
 
 
@@ -24,11 +25,16 @@ const TaskList = () => {
 
   const handleDelete = async (taskId) => {
     await deleteTask(taskId);
-    fetchData(); // Refresh the task list after deleting a task
+    fetchData();
+  };
+  const handleUpdate = async () => {
+    fetchData();
+  };
+  const handleCreate = async () => {
+    fetchData();
   };
 
   useEffect(() => {
-
     fetchData();
   }, [])
 
@@ -37,6 +43,7 @@ const TaskList = () => {
 
   return (
     <>
+      <TaskForm action="Create Task" onSubmit={handleCreate} />
       <h1>task list</h1>
       {data && data.map((task, index) => (
         <div key={index} className="task-item">
@@ -46,6 +53,7 @@ const TaskList = () => {
             task={selectedTask}
             onClose={() => setSelectedTask(null)}
             onDelete={() => handleDelete(task.id)}
+            onUpdate={handleUpdate}
           />}
         </div>
       ))}

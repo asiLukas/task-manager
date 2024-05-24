@@ -12,7 +12,7 @@ const username = "admin";
 const password = "admin";
 
 
-export const updateTask = async (id) => {
+export const updateTask = async (id, title, description, priority) => {
   try {
     const response = await api.put(getTaskDetail(id), {
       title: title,

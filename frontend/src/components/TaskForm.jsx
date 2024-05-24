@@ -1,17 +1,28 @@
-import React, { useState } from "react";
-import { createTask } from "../api/api";
+import React, { useState, useEffect } from "react";
+import { createTask, updateTask } from "../api/api";
 
-const TaskForm = ({ action }) => {
+const TaskForm = ({ task, action, onSubmit }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [priority, setPriority] = useState("medium");
-
-  const handleSubmit = async () => {
-    const task = await createTask(title, description, priority);
-    console.log(task);
+  const [priority, setPriority] = useState(task ? task.priority : "medium");
+  useEffect(() => {
+    if (task) {
+      setTitle(task.title);
+      setDescription(task.description);
+      setPriority(task.priority);
+    }
+  }, [task]);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (task) {
+      await updateTask(task.id, title, description, priority);
+    } else {
+      await createTask(title, description, priority);
+    }
     setTitle("");
     setDescription("");
-    setPriority("");
+    setPriority("medium");
+    onSubmit();
   };
 
   return (
