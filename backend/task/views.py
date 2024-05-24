@@ -5,30 +5,18 @@ from rest_framework.generics import (
     RetrieveUpdateDestroyAPIView,
     ListAPIView,
 )
-from rest_framework import permissions
 
 from task.models import Task
 from task.serializers import TaskSerializer
-
-
-class IsOwnerReadOnly(permissions.BasePermission):
-    """
-    custom permission to make sure non-owners have only read-only
-    rights even though we filter the querysets
-    """
-
-    def has_object_permission(self, request, view, obj):
-        if request.method in permissions.SAFE_METHODS:
-            return True
-        return obj.owner == request.user
+from task.utils import CustomPagination, IsOwnerReadOnly
 
 
 # GET
 class TaskList(ListAPIView):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
-
     permission_classes = [permissions.IsAuthenticated]
+    pagination_class = CustomPagination
 
     def get_queryset(self):
         return Task.objects.filter(owner=self.request.user)
