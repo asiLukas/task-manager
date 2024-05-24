@@ -4,3 +4,99 @@
   padding: 2rem;
   text-align: center;
 }
+.task-item {
+  margin-bottom: 20px;
+}
+
+.details-button {
+  padding: 10px 20px;
+  background-color: #5c5c5c;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.task-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2d2d2d;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px
+}
+
+.task-popup h2 {
+  margin-top: 0;
+}
+
+.task-popup p {
+  margin: 10px 0;
+}
+
+.task-popup button {
+  padding: 8px 16px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 10px
+}
+
+.task-popup button:hover {
+  background-color: #5c5c5c;
+}
+
+.task-create {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #2d2d2d;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.task-create h1 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+.task-create form {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-create label {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.task-create input,
+.task-create textarea,
+.task-create select{
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.task-create button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.task-create button[type="submit"]:hover {
+  background-color: #0056b3;
+}
