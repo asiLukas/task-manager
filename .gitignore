@@ -1,0 +1,215 @@
+# Django
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+*.pyd
+*.pyo
+*.pyc
+*.pyd
+__pycache__/
+*.so
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Environment variables
+.env
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Virtual Environment
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Django static and media files
+/static/
+/media/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+.tox/
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# Translations
+*.mo
+*.pot
+
+# Migrations
+*/migrations/__pycache__/
+*/migrations/*.pyc
+
+# Backup files
+*.bak
+*.swp
+*~
+*#
+
+# React
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# Next.js build output
+.next/
+
+# Gatsby files
+.cache/
+public/
+
+# Nuxt.js build output
+.nuxt/
+dist/
+
+# vuepress build output
+.vuepress/dist/
+
+# vuepress v2.x temp and cache directory
+.temp/
+
+# Docusaurus cache and generated files
+.docusaurus/
+build/
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Parcel cache
+.cache/
+
+# Next.js build output
+.next/
+out/
+
+# micro bundle
+dist/
+
+# Rollup cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Snowpack build directory
+build/
+
+# Storybook build outputs
+.out/
+.storybook-out/
+
+# vuepress build output
+.vuepress/dist/
+
+# Tailwind CSS
+tailwind.config.js
+tailwind.config.cjs
+
+# Nuxt.js
+.nuxt/
+
+# svelte kit
+.svelte-kit/
+
+# temporary folders
+.tmp/
+
+# MacOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Volume Serial Number
+.Spotlight-V100
+.Trashes
+
+# Icon must end with two \r
+Icon
+
+# Windows Explorer thumbnail cache
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Volume Serial Number
+.Spotlight-V100
+.Trashes
+
+# Icon must end with two \r
+Icon
+
+# Windows shortcuts
+*.lnk
