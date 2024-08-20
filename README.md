@@ -1,5 +1,7 @@
 # Task Manager
 
+- This project was completed in just 4 hours from start to finish, so please take that into consideration
+
 ### Installation
 
 ### backend
